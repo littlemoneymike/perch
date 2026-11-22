@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perch: downloads and screenshots, ready to drag</title>
+  <meta name="description" content="Perch is a free Mac menu-bar app. It catches downloads and screenshots in two small trays, and shaking a dragged file opens a ring to convert, rename, copy or send it.">
+  <meta property="og:title" content="Perch for Mac">
+  <meta property="og:description" content="Downloads and screenshots, ready to drag.">
+  <meta property="og:image" content="images/ring-pdf.png">
+  <meta name="theme-color" content="#FAF9F6">
+  <link rel="icon" href="favicon.png">
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="./"><img src="images/icon.png" alt="" width="28" height="28">Perch</a>
+    <nav>
+      <a href="#ring">The ring</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#setup">Setup</a>
+      <a href="#faq">Questions</a>
+      <a class="nav-download" href="https://github.com/littlemoneymike/perch/releases/latest/download/Perch.dmg">Download</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Downloads and screenshots, ready to drag.</h1>
+      <p class="lede">Perch catches downloads and screenshots in two small trays on your Mac. While dragging a file, shake the pointer to convert, rename, copy, or send it.</p>
+      <div class="actions">
+        <a class="button" href="https://github.com/littlemoneymike/perch/releases/latest/download/Perch.dmg">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+          Download for Mac
+        </a>
+        <a class="button secondary" href="#demo" id="seeHow">See how it works</a>
+      </div>
+      <p class="fineprint">Free · macOS 14 or later</p>
+
+      <div class="demo" id="demo">
+        <div class="stage-wrap">
+          <div class="stage" role="img" aria-label="A Mac desktop. Sunset.jpg, just downloaded in a browser, sits in Perch's File Tray at the top right of the screen. In the replay it is picked up from the tray, the pointer is shaken, the action ring opens, and Convert then PDF is chosen, which adds Sunset.pdf to the tray."></div>
+        </div>
+        <div class="demo-bar">
+          <ol class="steps">
+            <li>A download lands in the File Tray</li>
+            <li>Pick it up and shake the pointer</li>
+            <li>Let go on an action</li>
+          </ol>
+          <button class="demo-pause" aria-label="Pause the replay">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ring" id="ring">
+      <div class="section-head">
+        <h2>Shake to open the action ring</h2>
+        <p>The ring opens under the file you're holding. Rest on a section to see its choices, then let go on one.</p>
+      </div>
+      <div class="ring-grid">
+        <div class="ring-figure">
+          <div class="ring-art">
+            <img src="images/ring-idle.png" alt="Perch's action ring around Sunset.jpg. It has four sections: Convert at the top, Rename on the right, Copy at the bottom and Send on the left." width="280" height="280">
+            <svg class="ring-overlay" viewBox="0 0 280 280" aria-hidden="true"></svg>
+          </div>
+        </div>
+
+        <fieldset class="action-list">
+          <legend>Pick an action to see one thing it does</legend>
+          <label class="action selected">
+            <input type="radio" name="action" value="convert" checked>
+            <span class="mark" aria-hidden="true"></span>
+            <span class="action-text"><b>Convert</b><span>Images to PDF, JPG, PNG or HEIC. PDFs to images, text or slides.</span></span>
+          </label>
+          <label class="action">
+            <input type="radio" name="action" value="rename">
+            <span class="mark" aria-hidden="true"></span>
+            <span class="action-text"><b>Rename</b><span>One file or a whole batch, with dates, numbers or find and replace.</span></span>
+          </label>
+          <label class="action">
+            <input type="radio" name="action" value="copy">
+            <span class="mark" aria-hidden="true"></span>
+            <span class="action-text"><b>Copy</b><span>The file, its name, its path, or the text inside it.</span></span>
+          </label>
+          <label class="action">
+            <input type="radio" name="action" value="send">
+            <span class="mark" aria-hidden="true"></span>
+            <span class="action-text"><b>Send</b><span>AirDrop, Share, or straight to a favorite folder.</span></span>
+          </label>
+        </fieldset>
+
+        <div class="example">
+          <div class="ex on" data-example="convert">
+            <div class="ex-visual">
+              <span class="ex-file"><img src="images/thumb-sunset.jpg" alt="" width="48" height="33">Sunset.jpg</span>
+              <svg class="ex-to" width="22" height="12" viewBox="0 0 22 12" role="img" aria-label="becomes"><path d="M1 6h19m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="ex-file"><span class="ex-pdf" aria-hidden="true">PDF</span>Sunset.pdf</span>
+            </div>
+            <p><b>Convert, then PDF.</b> Sunset.pdf is saved next to the original and joins it in the tray.</p>
+          </div>
+          <div class="ex" data-example="rename">
+            <div class="ex-visual">
+              <span class="ex-name">Sunset.jpg</span>
+              <svg class="ex-to" width="22" height="12" viewBox="0 0 22 12" role="img" aria-label="becomes"><path d="M1 6h19m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="ex-name new"><span id="exDate">2026-11-21</span> Sunset.jpg</span>
+            </div>
+            <p><b>Rename, then Date.</b> Perch puts today's date in front and asks you to confirm. For a download it renames its own copy, and the original keeps its name.</p>
+          </div>
+          <div class="ex" data-example="copy">
+            <div class="ex-visual">
+              <span class="ex-clip"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M9 4h6v3H9zM8 5.5H6.5A1.5 1.5 0 0 0 5 7v11.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16"/></svg>/Users/you/Downloads/Sunset.jpg</span>
+            </div>
+            <p><b>Copy, then Path.</b> The file's full location is on your clipboard, ready to paste.</p>
+          </div>
+          <div class="ex" data-example="send">
+            <div class="ex-visual">
+              <span class="ex-share" role="img" aria-label="The macOS Share menu for Sunset.jpg, listing AirDrop, Mail and Messages"><b>Share “Sunset.jpg”</b><span><i></i>AirDrop</span><span><i></i>Mail</span><span><i></i>Messages</span></span>
+            </div>
+            <p><b>Send, then Share.</b> The macOS Share menu opens for the file, with whatever your Mac offers there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capture" id="screenshots">
+      <div class="section-head">
+        <h2>Take three screenshots. Send them in one drag.</h2>
+        <p>Each capture waits in the Screenshot Tray while you take the next. Drag one out or drag them all into a message or document. The rest are saved to your screenshot folder.</p>
+      </div>
+      <div class="demo" id="demoCapture">
+        <div class="stage-wrap">
+          <div class="stage" role="img" aria-label="A Mac desktop. In the replay, three screenshots are taken one after another and collect in Perch's Screenshot Tray at the bottom right of the screen. All three are then dragged into a message in one go and arrive as three images."></div>
+        </div>
+        <div class="demo-bar">
+          <ol class="steps">
+            <li>Take three screenshots</li>
+            <li>They wait in the Screenshot Tray</li>
+            <li>Drag all three into a message</li>
+          </ol>
+          <button class="demo-pause" aria-label="Pause the replay">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="feature-copy">
+        <h2>The File Tray shows up when a file is in your hand.</h2>
+        <p>It appears at the top right when a download finishes, or the moment you start dragging a file from Finder, your browser or most other apps. Drop files on it to keep them close, then drag them back out where they're needed.</p>
+      </div>
+      <div class="feature-art"><img src="images/files-tray-light.png" alt="The File Tray holding a PDF and three images, with a Drag all 4 handle" width="190" height="190"></div>
+    </section>
+
+    <section class="facts">
+      <div>
+        <h3>Private</h3>
+        <p>Perch has no accounts and no analytics, and it never connects to the internet. <a href="privacy.html">Privacy policy</a></p>
+      </div>
+      <div>
+        <h3>Any recent Mac</h3>
+        <p>One download runs on Apple Silicon and Intel, on macOS 14 Sonoma or later.</p>
+      </div>
+      <div>
+        <h3>Your shortcuts</h3>
+        <p>Choose the keys for taking a screenshot and for showing each tray.</p>
+      </div>
+    </section>
+
+    <section class="setup" id="setup">
+      <div class="setup-copy">
+        <h2>Setup is one shortcut and one permission</h2>
+        <ol>
+          <li><b>Open Perch.</b> Drag it to Applications and open it. A short setup window walks through the next two steps.</li>
+          <li><b>Pick your screenshot shortcut.</b> It starts as <span class="keycaps"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>7</kbd></span> and you can change it to any keys. If macOS already uses them, Perch says so and shows where to switch the other one off, so one press never takes two screenshots.</li>
+          <li><b>Allow Screen Recording.</b> macOS won't let any app capture the screen without this permission. Perch uses it only for the screenshots you take, and it never records video.</li>
+        </ol>
+      </div>
+      <img class="setup-shot" src="images/setup-keys.png" alt="Perch's setup window on the step for choosing the screenshot shortcut. It shows Shift Command 7 and reports no conflicts." width="520" height="477">
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>Questions</h2>
+      <details><summary>Is Perch free?</summary><p>Yes.</p></details>
+      <details><summary>What does it need permission for?</summary><p>Screen Recording, to take screenshots. macOS will also ask whether Perch may see your Downloads folder, so new downloads can appear in the File Tray, and, only if you convert a PowerPoint file, whether it may ask Keynote to export it. Perch doesn't use Accessibility or Input Monitoring.</p></details>
+      <details><summary>One press of my screenshot keys takes two screenshots. Why?</summary><p>macOS lets you assign keys to its own screenshot tools, and if those match Perch's, both run. Open Perch's menu and choose <em>Welcome &amp; Setup…</em> to pick different keys, or turn the macOS one off in System Settings › Keyboard › Keyboard Shortcuts › Screenshots.</p></details>
+      <details><summary>Which Macs does it run on?</summary><p>Any Mac with macOS 14 Sonoma or later, on Apple Silicon or Intel.</p></details>
+      <details><summary>How do I uninstall it?</summary><p>Quit Perch from its menu-bar icon and drag it from Applications to the Trash. To remove its saved data too, delete the Perch folder in ~/Library/Application Support.</p></details>
+      <details><summary>I found a bug or have an idea.</summary><p>Choose <em>Send Feedback…</em> in Perch's menu, or <a href="https://github.com/littlemoneymike/perch/issues/new">open an issue on GitHub</a>.</p></details>
+    </section>
+
+    <section class="final">
+      <img src="images/icon.png" alt="" width="64" height="64">
+      <h2>Give your files somewhere to land.</h2>
+      <a class="button" href="https://github.com/littlemoneymike/perch/releases/latest/download/Perch.dmg">Download for Mac</a>
+      <p class="fineprint">Free · macOS 14 or later</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Perch</span>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/littlemoneymike/perch/releases">All versions</a>
+    <a href="https://github.com/littlemoneymike/perch/issues/new">Feedback</a>
+  </footer>
+  <script src="demo.js"></script>
+</body>
+</html>
